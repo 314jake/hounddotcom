@@ -1,5 +1,5 @@
 body {
-    background-image: url(../images/balls.png);
+    background-image: url(../images/boobs.png);
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -55,12 +55,21 @@ a:hover {
     font-size: larger;
 }
 
+.hey,
 .love-you {
-    margin-top: 70vh;
-    text-align: center;
     font-family: "Mystery Quest";
     font-weight: 1000;
     font-size: 100px;
     color: maroon;
     text-shadow: 5px 5px 5px darkgray;
+}
+
+.hey {
+    margin-top: 12%;
+    margin-left: 30%;
+}
+
+.love-you {
+    margin-top: 11%;
+    margin-left: 50%;
 }
