@@ -4,6 +4,15 @@ body {
     background-repeat: no-repeat;
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
 header {
     background-image: linear-gradient(100deg, #248, #36c);
     height: 120px;
@@ -16,13 +25,17 @@ header {
     font-family: DynaPuff, 'Trebuchet MS', sans-serif;
     color: white;
     font-weight: 400;
+
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    align-items: end;
 }
 
-header * {
+.banner * {
     display: inline;
 }
 
-header h1 {
+.banner h1 {
     margin: 0 0 0 20px;
     font-size: 100px;
 }
@@ -34,25 +47,47 @@ header h1 {
     letter-spacing: -5px;
 }
 
-.style-select {
-    margin-left: 100px;
+.style-select * {
+    display: inline-block;
 }
 
 .style-select ul li {
     margin-left: 40px; 
+    width: 50px;
 }
 
-a{
-    color: white;
-    text-decoration: none;
-}
-
-a:visited {
-    color: white;
-}
-
-a:hover {
+.style-select ul li a:hover {
     font-size: larger;
+}
+
+.loved-ones-link {
+    background-image: url(../images/heart.png);
+    background-size: 100%;
+    height: 110px;
+    width: 100px;
+
+    justify-self: end;
+    align-self: center;
+    margin-right: 40px;
+}
+
+.loved,
+.ones {
+    font-size: 20px;
+    height: 26px;
+}
+
+.loved {
+    margin: 35px 0 0 10px;
+}
+
+.ones {
+    margin: 0 0 0 32px;
+}
+
+.loved-ones-link:hover a h2 {
+    font-size: 22px;
+    height: 24px;
 }
 
 .love-you {
