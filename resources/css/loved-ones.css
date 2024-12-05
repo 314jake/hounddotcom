@@ -1,5 +1,8 @@
 body {
-    background-color: #A95879;
+    background-color: rgba(169, 88, 121, 1);
+    background-image: url(../images/Mascotas.png);
+    background-size: 33%;
+    background-blend-mode: lighten;
 }
 
 header {
