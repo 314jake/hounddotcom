@@ -2,8 +2,10 @@
 <html>
     <head>
         <title>hound.com</title>
-        <link href="./resources/css/index.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="./resources/images/favicon.ico" type="x-icon">
+
         <link href="./resources/css/reset.css" type="text/css" rel="stylesheet"/>
+        <link href="./resources/css/index.css" type="text/css" rel="stylesheet" />
         
         <!--link to DynaPuff font from Google fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +16,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
     </head>
     <body>
         <header>
@@ -22,10 +27,12 @@
             </div>
             <div class="style-select">
                 <h2>Select style:</h2>
-                <ul>
-                    <li><a href="#">Balls</a></li>
-                    <li><a href="./boobs.html">Boobs</a></li>
-                </ul>
+                <div class="link-c">
+                    <a href="#">Balls</a>
+                </div>
+                <div class="link-c">
+                    <a href="./boobs.html">Boobs</a>
+                </div>
             </div>
             <div class="loved-ones-link">
                 <a href="./loved-ones.html"><h2 class="loved">Loved</h2><h2 class="ones">Ones</h2></a>
@@ -35,5 +42,13 @@
         <main>
             <h1 class="love-you">Hey! I love you!</h1>
         </main>
+
+        <footer> <!--Only to display on mobile-->
+            <div class="style-foot">
+                <h2>Select Style:</h2>
+                <a href="#">Balls</a>
+                <a href="./boobs.html">Boobs</a>
+            </div>
+        </footer>
     </body>
 </html>

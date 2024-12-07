@@ -1,7 +1,5 @@
-body {
-    background-image: url(../images/boobs.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
+html {
+    font-size: 16px;
 }
 
 a{
@@ -13,22 +11,30 @@ a:visited {
     color: white;
 }
 
-header {
-    background-image: linear-gradient(100deg, #248, #36c);
-    height: 120px;
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    width: 100vw;
+body {
+    height: 100vh;
 
-    
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+footer {
+    background-image: linear-gradient(100deg, #248, #36c);
+    width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header *,
+footer * {
     font-family: DynaPuff, 'Trebuchet MS', sans-serif;
     color: white;
     font-weight: 400;
-
-    display: grid;
-    grid-template-columns: 50% 25% 25%;
-    align-items: end;
 }
 
 .banner * {
@@ -37,38 +43,51 @@ header {
 
 .banner h1 {
     margin: 0 0 0 20px;
-    font-size: 100px;
+    font-size: 6.25rem;
 }
 
 .dot {
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 600;
-    letter-spacing: -5px;
+    letter-spacing: -0.3125rem;
 }
 
-.style-select * {
-    display: inline-block;
+.style-select {
+    height: 4rem;
+    width: 11rem;
+
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    justify-items: center;
+    align-items: center;
 }
 
-.style-select ul li {
-    margin-left: 40px; 
-    width: 50px;
+.style-select h2 {  
+    text-align: center;
+
+    grid-column: span 2;
 }
 
-.style-select ul li a:hover {
+.style-select a {
+    text-align: center;
+    margin: auto;
+}
+
+.style-select a:hover {
     font-size: larger;
 }
 
 .loved-ones-link {
     background-image: url(../images/heart.png);
     background-size: 100%;
+    background-repeat: no-repeat;
     height: 110px;
     width: 100px;
 
     justify-self: end;
     align-self: center;
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
 .loved,
@@ -90,21 +109,70 @@ header {
     height: 24px;
 }
 
-.hey,
+footer {
+    height: 3rem;
+    width: 100%;
+
+    display: none;
+}
+
+.style-foot{
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer h2 {
+    font-size: 1rem;
+}
+
+footer a {
+    font-size: 0.75rem;
+}
+
+/*Header&Footer Mobile*/
+
+@media only screen and (max-width: 890px) {
+    .style-select {
+        display: none;
+    }
+
+    footer {
+        display: block;
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .dot {
+        font-size: 0.6rem;
+        letter-spacing: 0;
+    }
+}
+
+/*Main section*/
+
+main {
+    background-image: url(../images/boobs.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    flex-grow: 1;
+}
+
 .love-you {
+    position: absolute;
+    bottom: 15%;
+
+    width: 100%;
+    text-align: center;
     font-family: "Mystery Quest";
     font-weight: 1000;
     font-size: 100px;
     color: maroon;
     text-shadow: 5px 5px 5px darkgray;
-}
-
-.hey {
-    margin-top: 12%;
-    margin-left: 30%;
-}
-
-.love-you {
-    margin-top: 11%;
-    margin-left: 50%;
 }

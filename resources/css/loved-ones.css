@@ -1,17 +1,21 @@
+html {
+    font-size: 16px;
+}
+
 body {
     background-color: rgba(169, 88, 121, 1);
-    background-image: url(../images/Mascotas.png);
+    background-image: url(../images/mascotas.png);
     background-size: 33%;
     background-blend-mode: lighten;
 }
 
 header {
     background-image: linear-gradient(100deg, #248, #36c);
-    height: 120px;
+    height: 7.5rem;
     position: fixed;
     top: 0;
     z-index: 10;
-    width: 100vw;
+    width: 100%;
 
     
     font-family: DynaPuff, 'Trebuchet MS', sans-serif;
@@ -27,25 +31,43 @@ header {
     display: inline;
 }
 .banner h1 {
-    margin: 0 0 0 20px;
-    font-size: 100px;
+    margin: 0 0 0 1.25rem;
+    font-size: 6.25rem;
 }
 
 .dot {
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 600;
-    letter-spacing: -5px;
+    letter-spacing: -0.3125rem;
 }
 
 nav {
     text-align: center;
-    margin: 0 20px 20px 0;
+    margin: 0 1rem 1rem 0;
 }
 
 nav a:visited {
     color: white;
 }
+
+
+@media only screen and (max-width:720px) {
+    header {
+        align-items: center;
+    }
+    
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .dot {
+        font-size: 0.6rem;
+        letter-spacing: 0;
+    }
+}
+
+/*main section*/
 
 main {
     position: relative;
@@ -53,18 +75,26 @@ main {
 }
 
 #loved-ones {
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
     padding: 20px;
 
-    display: grid;
-    grid-template: 1fr 1fr / minmax(0, 2fr) repeat(2, minmax(0, 1fr));
-    grid-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+}
+
+.pet{
+    width: 20rem;
+}
+
+.pearl,
+.halo {
+    width: 10rem;
 }
 
 .pet {
-    width: 100%;
 }
 
 .pet img {
@@ -72,17 +102,5 @@ main {
     width: 80%;
     height: 80%;
     display: block;
-    margin: 0 auto;
-}
-
-.pearl img {
-    margin-right: 0;
-}
-
-.halo img {
-    margin-left: 0;
-}
-
-.po {
-    grid-column: span 2;
+    margin: 1rem auto;
 }
