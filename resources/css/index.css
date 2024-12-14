@@ -28,6 +28,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    height: 7rem;
 }
 
 header *,
@@ -53,71 +55,84 @@ footer * {
     letter-spacing: -0.3125rem;
 }
 
-.style-select {
-    height: 4rem;
-    width: 11rem;
-
-    display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr;
-    justify-items: center;
+nav {
+    display: flex;
     align-items: center;
 }
 
-.style-select h2 {  
+nav .link {
+    margin: 0 1rem;
+
+    height: 6.875rem;
+    width: 6.25rem;
+}
+
+nav a {
+    height: 100%;
+    width: 100%;
+}
+
+.story {
+    background-image: url(../images/scroll.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.story a {
+    display: flex;
+    align-items: center;
+
+    font-size: 1rem;
+}
+
+.story a:hover {
+    font-size: 1.125rem;
+}
+
+.story h2 {
     text-align: center;
+    font-size: 1em;
 
-    grid-column: span 2;
+    width: 80%;
+    margin: 0 auto;
+    
 }
 
-.style-select a {
-    text-align: center;
-    margin: auto;
-}
-
-.style-select a:hover {
-    font-size: larger;
-}
-
-.loved-ones-link {
+.loved-ones {
     background-image: url(../images/heart.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 110px;
-    width: 100px;
 
-    justify-self: end;
-    align-self: center;
-    margin-right: 10px;
+    justify-self: flex-end;
+}
+
+.loved-ones a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.25rem;
+}
+
+.loved-ones a:hover {
+    font-size: 1.375rem;
 }
 
 .loved,
 .ones {
-    font-size: 20px;
-    height: 26px;
-}
-
-.loved {
-    margin: 35px 0 0 10px;
-}
-
-.ones {
-    margin: 0 0 0 32px;
-}
-
-.loved-ones-link:hover a h2 {
-    font-size: 22px;
-    height: 24px;
+    font-size: 1em;
 }
 
 footer {
     height: 3rem;
     width: 100%;
-
-    display: none;
 }
 
 .style-foot{
     height: 100%;
+    width: 300px;
+    margin: 0 auto;
 
     display: flex;
     align-items: center;
@@ -132,24 +147,46 @@ footer a {
     font-size: 0.75rem;
 }
 
-/*Header&Footer Mobile*/
+/*Header Tablet*/
 
 @media only screen and (max-width: 890px) {
-    .style-select {
-        display: none;
-    }
-
-    footer {
-        display: block;
-    }
-
     .banner h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .dot {
         font-size: 0.6rem;
         letter-spacing: 0;
+    }
+}
+
+/* Header Mobile */
+
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .banner {
+        text-align: center;
+    }
+
+    nav {
+        justify-content: space-around;
+
+        width: 80%;
+        height: 2.25rem;
+    }
+
+    nav .link {
+        height: 2.125rem;
+        width: 1.875rem;
+        padding: 0rem;
+    }
+
+    nav h2 {
+        display: none;
     }
 }
 

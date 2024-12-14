@@ -51,26 +51,6 @@ nav a:visited {
     color: white;
 }
 
-
-@media only screen and (max-width:720px) {
-    body {
-        background-size: 100%;
-    }
-    
-    header {
-        align-items: center;
-    }
-    
-    .banner h1 {
-        font-size: 2rem;
-    }
-
-    .dot {
-        font-size: 0.6rem;
-        letter-spacing: 0;
-    }
-}
-
 /*main section*/
 
 main {
@@ -105,3 +85,33 @@ main {
     display: block;
     margin: 1rem auto;
 }
+
+/*mobile styles*/
+
+@media only screen and (max-width:720px) {
+    body {
+        background-size: 100%;
+    }
+    
+    header {
+        align-items: center;
+    }
+    
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .dot {
+        font-size: 0.6rem;
+        letter-spacing: 0;
+    }
+
+    nav {
+        margin-bottom: 0;
+    }
+
+    #loved-ones {
+        width: 100%;
+    }
+}
+
